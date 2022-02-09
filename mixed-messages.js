@@ -10,6 +10,16 @@ let randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
 console.log('randomVerb', randomVerb);
 
 
+if (randomSubject == 'Ich') {
+    // cut last char if subject is 'Ich'
+    randomVerb = cutLastChar(randomVerb);
+    console.log('randomVerb_cutted', randomVerb);
+} else if (randomSubject != 'Wir') {
+    // subject is 'Du', 'Er', 'Sie' or 'Es' -> set randomVerb to present tense
+    const indexOfRandomVerb = verbs.indexOf(randomVerb);
+    randomVerb = verbsPresent[indexOfRandomVerb];
+}
+
 function cutLastChar(string) {
     const newLength = string.length - 1;
     return string.slice(0, newLength);
