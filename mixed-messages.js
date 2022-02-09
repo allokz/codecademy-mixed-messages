@@ -4,11 +4,15 @@ const verbsPresent = ['isst', 'gibt', 'findet', 'brät', 'zeichnet', 'repariert'
 const adjectives = ['leckere', 'langsame', 'schnelle', 'helle', 'dunkle', 'grüne', 'rote', 'gelbe', 'moderne', 'antike'];
 const objects = ['Freunde', 'Kuchen', 'Autos', 'Computer', 'Lampen', 'Glasflaschen', 'Telefone', 'Werkzeuge', 'Bilder'];
 
+function cutLastChar(string) {
+    const newLength = string.length - 1;
+    return string.slice(0, newLength);
+}
+
 const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
 console.log('randomSubject', randomSubject);
 let randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
 console.log('randomVerb', randomVerb);
-
 
 if (randomSubject == 'Ich') {
     // cut last char if subject is 'Ich'
@@ -19,9 +23,3 @@ if (randomSubject == 'Ich') {
     const indexOfRandomVerb = verbs.indexOf(randomVerb);
     randomVerb = verbsPresent[indexOfRandomVerb];
 }
-
-function cutLastChar(string) {
-    const newLength = string.length - 1;
-    return string.slice(0, newLength);
-}
-// console.log(cutLastChar(verbs[1]));
