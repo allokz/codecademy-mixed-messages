@@ -5,3 +5,9 @@ const adjectives = ['leckere', 'langsame', 'schnelle', 'helle', 'dunkle', 'grün
 const objects = ['Freunde', 'Kuchen', 'Autos', 'Computer', 'Lampen', 'Glasflaschen', 'Telefone', 'Werkzeuge', 'Bilder'];
 
 const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
+
+function cutLastChar(string) {
+    const newLength = string.length - 1;
+    return string.slice(0, newLength);
+}
+// console.log(cutLastChar(verbs[1]));
