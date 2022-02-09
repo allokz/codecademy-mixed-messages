@@ -20,3 +20,6 @@ if (randomSubject == 'Ich') {
     const indexOfRandomVerb = verbs.indexOf(randomVerb);
     randomVerb = verbsPresent[indexOfRandomVerb];
 }
+
+const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+const randomObject = objects[Math.floor(Math.random() * objects.length)];
